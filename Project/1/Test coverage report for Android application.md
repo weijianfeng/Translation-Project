@@ -1,4 +1,6 @@
 #Android应用生成测试覆盖率报告
+原文地址
+
 对于使用AndroidJUnit4 runner创建的Android集成测试用例，之前一直都没有发现，一种合适的产生代码覆盖率的方式。我曾经尝试过很多方式，但是要不就是不奏效，要不就是只合适我现在已经不再使用的Robolectric测试框架，其他开发者，也渐渐不再新项目中使用这个测试框架了。比如Square的Sqlbrite项目，现在已经开始采用AndroidJUnit4 runner进行他们的项目测试。最近，我在Reddit上面发现了一个有趣的讨论，从中我发现了一个不需要额外插件，脚本和多行配置就可以简单生成代码覆盖率的方式，Android SDK 现在已经内置了对 [Emma Test Coverage](http://emma.sourceforge.net/)框架的支持，可以在官方文档中进行查阅。
 
 我们只要做的一件事，就是在 `build.gradle` 中应用`jacoco—android`插件。
